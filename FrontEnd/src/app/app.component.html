@@ -1,0 +1,16 @@
+<div>
+    <section id="main">
+       <div class="headerMenu">
+            <app-app-header *ngIf="!isLoggedIn && !isAdminLoggedIn"></app-app-header>
+            <app-client-header *ngIf="isLoggedIn && !isAdminLoggedIn"></app-client-header>
+            <app-admin-header *ngIf="!isLoggedIn && isAdminLoggedIn"></app-admin-header>
+        </div>
+        <video src="../../../assets/video/demo.mp4" loop muted autoplay oncanplay="this.play()" onloadedmetadata="this.muted = true"></video>
+        <div class="main-text">
+            <router-outlet></router-outlet>
+        </div>
+    </section>
+</div>
+
+
+

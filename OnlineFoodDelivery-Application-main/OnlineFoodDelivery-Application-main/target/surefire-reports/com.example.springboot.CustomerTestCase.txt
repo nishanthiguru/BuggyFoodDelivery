@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: com.example.springboot.CustomerTestCase
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 1, Errors: 1, Skipped: 2, Time elapsed: 0.347 s <<< FAILURE! - in com.example.springboot.CustomerTestCase
+getCustomerById  Time elapsed: 0.05 s  <<< ERROR!
+com.example.springboot.exception.ResourceNotFoundException: Customer not found with Id :'5000'
+	at com.example.springboot.CustomerTestCase.getCustomerById(CustomerTestCase.java:67)
+
+testReadAllCustomer  Time elapsed: 0.035 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting actual:
+  0
+to be greater than:
+  0
+
+	at com.example.springboot.CustomerTestCase.testReadAllCustomer(CustomerTestCase.java:60)
+

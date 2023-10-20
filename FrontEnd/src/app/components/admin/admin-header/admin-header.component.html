@@ -1,0 +1,19 @@
+<div id="navbar">
+    <div id="logo" style="cursor: pointer;"><img  src="../../../../assets/images/buggy logo.jpg" width="100px" height="100px">
+    </div>
+    <div id="navmenu">
+        <ul>
+            <li><a (click)="routerToLink('/admin/home')" [class.selected]="url === '/admin/home'">Home</a></li>
+            <li><a (click)="routerToLink('/admin/addproduct')" [class.selected]="url === '/admin/addproduct'">Add Food</a></li>
+            <li><a (click)="routerToLink('/admin/listproduct')" [class.selected]="url === '/admin/listproduct'">List Food</a></li>
+            <li><a (click)="routerToLink('/admin/orderlist')" [class.selected]="url === '/admin/orderlist'">Order List</a></li>
+            <li><a><div [matMenuTriggerFor]="menu" class="user-name-item "><div>{{userName}}&nbsp;</div><div><mat-icon>expand_more</mat-icon></div></div>   
+            </a></li>
+            <li><a> <mat-menu #menu="matMenu" class="pr-10">
+                <button (click)="routerToLink('/admin/logout')" mat-menu-item><mat-icon>logout</mat-icon> Logout</button>
+              </mat-menu></a></li>
+        </ul>
+  </div>
+</div>
+
+

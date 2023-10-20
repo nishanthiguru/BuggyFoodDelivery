@@ -1,0 +1,26 @@
+<div class="header">
+    <mat-icon (click)="closeDialog()">close</mat-icon>
+</div>
+
+<div class="scroll centered">
+    <div *ngIf="product.length === 0">
+        There is not any item in the Order
+    </div>
+    <div *ngIf="product.length > 0">
+        <table border="1">
+            <tr>
+                <th>Customer ID</th>
+                <th>Order Id</th>
+                <th>Food Name</th>
+                <th>Category</th>
+                <th>Food MRP</th>
+            </tr>
+            <tr *ngFor="let pro of product">
+                <td>{{order?.customer?.customerId}}</td>
+                <td>{{pro?.productId}}</td>
+                <td>{{pro?.productname}}</td>
+                <td>{{pro?.category}}</td>
+                <td>{{pro?.mrpPrice}}</td>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="clientHome">
+    <div *ngIf="cartList.length===0" class="centered">
+        No product available in cart
+    </div>
+    <div *ngIf="cartList.length>0" class="centered">
+        <table border="1" class="table">
+            <tr>
+                <th>Food Name</th>
+                <th>Price</th>
+                <th>Total</th>
+                <th></th>
+                </tr>
+            <tr *ngFor="let cart of cartList">
+                <td>{{cart?.product?.productname}}</td>
+                <td>{{cart?.mrpPrice}}</td>
+                <td>{{getTotal(cart?.quantity,cart?.mrpPrice)}}</td>
+                <td><button (click)="deleteCart(cart)" class="tableButton">Delete Cart</button></td>
+            </tr>
+        </table>
+    </div>
+    <div class="centered" *ngIf="cartList.length!==0">
+        <table style="width:100%; border-style: hidden;">
+           
+           
+            <tbody style="width:100%; border-style: hidden;">
+                <td style="width:50%"></td>
+              <td colspan="3" style="border-style: hidden;">Grand Total: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{grandTotal}} </td>
+              <td style="text-align: center;border-style: hidden;"><button (click)="placeOrder()" class="tableButton">Place Order</button></td>
+            </tbody>
+          </table>
+    </div>
+</div>

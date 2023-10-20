@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: com.example.springboot.ProductTestCase
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 1, Errors: 1, Skipped: 2, Time elapsed: 0.022 s <<< FAILURE! - in com.example.springboot.ProductTestCase
+getProductById  Time elapsed: 0.008 s  <<< ERROR!
+java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+	at com.example.springboot.ProductTestCase.getProductById(ProductTestCase.java:49)
+
+getAllProduct  Time elapsed: 0.01 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting actual:
+  0
+to be greater than:
+  0
+
+	at com.example.springboot.ProductTestCase.getAllProduct(ProductTestCase.java:42)
+
